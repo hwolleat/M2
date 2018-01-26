@@ -37,7 +37,12 @@ public class Person2 {
 		String outString = "";
 		ArrayList charArr = new ArrayList();
 		for (int i = 0; i < input.length(); i++) {
-			outString = outString + charArr.get(randy.nextInt(charArr.length));
+			charArr.add(input.charArr());
+		}
+		for (int i = 0; i < input.length(); i++) {
+			int randomInt = randy.nextInt(charArr.length);
+			outString = outString + charArr.get(randomInt);
+			charArr.remove(randomInt);
 		}
 	 	return outString;
 	}
